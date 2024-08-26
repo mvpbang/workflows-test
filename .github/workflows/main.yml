@@ -1,0 +1,17 @@
+name: gaga
+
+on: 
+  watch:
+    types: [started]
+
+jobs:
+  first_job:
+    name: get
+    runs-on: ubuntu-latest
+    steps:
+    - name: s001
+      env:
+        x: 111
+        y: 222
+      run: |
+        echo "get private env: $x,$y"
