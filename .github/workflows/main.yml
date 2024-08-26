@@ -1,13 +1,7 @@
 name: first-gaga-action
 
 on:
-  workflow_call:
-    inputs:
-      username:
-        description: 'A username passed from the caller workflow'
-        default: 'mvpbang'
-        required: false
-        type: string
+  workflow_dispatch:
 
 jobs:
   first_job:
