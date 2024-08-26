@@ -1,4 +1,4 @@
-name: gaga
+name: first-gaga-action
 
 on: 
   watch:
