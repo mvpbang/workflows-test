@@ -1,8 +1,13 @@
 name: first-gaga-action
 
-on: 
-  watch:
-    types: [started]
+on:
+  workflow_call:
+    inputs:
+      username:
+        description: 'A username passed from the caller workflow'
+        default: 'mvpbang'
+        required: false
+        type: string
 
 jobs:
   first_job:
@@ -15,3 +20,4 @@ jobs:
         y: 222
       run: |
         echo "get private env: $x,$y"
+        echo "the username: ${{ inputs.username }}"
